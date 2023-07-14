@@ -1,0 +1,19 @@
+<form #login="ngForm" (ngSubmit)="display()">
+    <h2 class="text-center text-primary">User Login</h2>
+    <br>
+    <br>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" [(ngModel)]="User.email" #email="ngModel"[class.is-invalid]="email.invalid && email.touched" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+      <small class="text-danger" [class.d-none]="email.valid || email.touched">Enter valid Email</small>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="User.password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required pattern="^[a-zA-Z0-9]{8}$">
+      <small class="text-danger" [class.d-none]="password.valid || password.touched">Enter Valid Password</small>
+    </div>
+    <button type="submit" (click)="display()" class="btn btn-primary">Submit</button>
+    <a routerLink="#" class="forgot-password">Forgot Password?</a>
+  </form>
+
+  

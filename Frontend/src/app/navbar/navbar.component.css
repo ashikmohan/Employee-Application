@@ -1,0 +1,44 @@
+nav {
+    background-color:white;
+    color: royalblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo a {
+    color: royalblue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 15px;
+  }
+  
+  .menu li a {
+    color: royalblue;
+    text-decoration: none;
+  }
+  
+  .logout a {
+    color: royalblue;
+    text-decoration: none;
+    
+  }
+  .button-blue {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
