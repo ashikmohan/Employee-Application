@@ -1,5 +1,5 @@
-<form #login="ngForm" (ngSubmit)="display()">
-    <h2 class="text-center text-primary">Login</h2>
+<form #login="ngForm" (ngSubmit)="display1()">
+    <h2 class="text-center text-primary">Admin Login</h2>
     <br>
     <br>
     <div class="mb-3">
@@ -12,8 +12,8 @@
       <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="User.password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" required pattern="^[a-zA-Z0-9]{8}$">
       <small class="text-danger" [class.d-none]="password.valid || password.touched">Enter Valid Password</small>
     </div>
-    <button type="submit" (click)="display()" class="btn btn-primary">Submit</button>
-    <a routerLink="adminlogin" class="forgot-password">Admin Login</a>
+    <button type="submit"  class="btn btn-primary">Submit</button>
+    
     <a routerLink="#" class="forgot-password">Forgot Password?</a>
     
   </form>

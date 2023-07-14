@@ -8,15 +8,20 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthserviceService } from './authservice.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { EmployeesComponent } from './employees/employees.component';
-import { CreateemployeesComponent } from './createemployees/createemployees.component';
+
+import { DashboarduserComponent } from './dashboarduser/dashboarduser.component';
+import { DashboardadminComponent } from './dashboardadmin/dashboardadmin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { Auth2Service } from './auth2.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    EmployeesComponent,
-    CreateemployeesComponent
+    DashboarduserComponent,
+    DashboardadminComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,7 @@ import { CreateemployeesComponent } from './createemployees/createemployees.comp
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthserviceService],
+  providers: [AuthserviceService,Auth2Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

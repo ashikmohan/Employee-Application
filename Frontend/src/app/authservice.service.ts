@@ -10,6 +10,7 @@ export class AuthserviceService {
   senddetails(data:any){
     return this.http.post<any>('http://localhost:5000/login',data)
   }
+  
 
 }
 

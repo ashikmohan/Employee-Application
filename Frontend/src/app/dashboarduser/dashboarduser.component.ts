@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-createemployees',
-  templateUrl: './createemployees.component.html',
-  styleUrls: ['./createemployees.component.css']
+  selector: 'app-dashboarduser',
+  templateUrl: './dashboarduser.component.html',
+  styleUrls: ['./dashboarduser.component.css']
 })
-export class CreateemployeesComponent {
+export class DashboarduserComponent {
 
   constructor(private router:Router){ }
 

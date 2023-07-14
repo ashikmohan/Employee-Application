@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 
-import { CreateemployeesComponent } from './createemployees/createemployees.component';
-import { EmployeesComponent } from './employees/employees.component';
+
+import { DashboardadminComponent } from './dashboardadmin/dashboardadmin.component';
+import { DashboarduserComponent } from './dashboarduser/dashboarduser.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 const routes: Routes = [{path:'',component:LoginComponent},
-{path:'createemployees',component:CreateemployeesComponent},{path:'employees',component:EmployeesComponent},
+{path:'dashboard/admin',component:DashboardadminComponent},{path:'dashboard/user',component:DashboarduserComponent},{path:'adminlogin',component:AdminloginComponent}
 
 ];
 
