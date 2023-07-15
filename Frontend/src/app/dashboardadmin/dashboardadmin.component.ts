@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BackendAPIService } from '../backend-api.service';
 
 @Component({
   selector: 'app-dashboardadmin',
@@ -7,11 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboardadmin.component.css']
 })
 export class DashboardadminComponent {
-
-  constructor(private router:Router){ }
+cards:any[]=[];
+  constructor(private router:Router,private api:BackendAPIService){ }
 
   logout(){
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
+
+  ngOnInit(){
+    this.api.getCards().subscribe((res:any)=>{
+      this.cards=res.data;
+      
+    })
+  }
+editItem(id:any){
+  
+  this.router.navigate(['/editItem'])
+}
 }

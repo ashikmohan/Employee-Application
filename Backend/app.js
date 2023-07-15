@@ -4,12 +4,15 @@ const morgan=require('morgan');
 const cors= require('cors');
 const jwt=require('jsonwebtoken');
 
+require('./db/index')
+const api=require('./router/employees')
 
-
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
+app.use('/api',api)
+
 // user
 app.post('/login',async (req,res)=>{
 try {
@@ -32,7 +35,9 @@ try {
 
 })
 
+
 //admin
+
 app.post('/adminlogin',async (req,res)=>{
 try {
     console.log(req.body)

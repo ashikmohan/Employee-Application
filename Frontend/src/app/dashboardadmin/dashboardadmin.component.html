@@ -1,2 +1,30 @@
 <app-navbar></app-navbar>
-<p>dashboardadmin works!</p>
+
+
+<button class="create-employee-button" routerLink="/edit">Create Employee</button>
+
+
+<div class="container mt-5 px-2 ">
+   <div class="row">
+    <div class="col-4" *ngFor="let item of cards">
+
+        <div class="card mb-4" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title text-center">Name: {{item.Name}}</h5>
+              <h6 class="card-text">Designation: {{item.Designation}}</h6>
+              <h6 class="card-text">Location: {{item.Location}}</h6>
+              <h6 class="card-text">Salary: {{item.Salary}}</h6>
+            
+              <div class="d-flex justify-content-between">
+                <span style="cursor: pointer" (click)="editItem(item.id)"><i class="bi bi-pen-fill text-primary"></i></span>
+                <span style="cursor: pointer" ><i class="bi bi-trash3-fill"></i></span>
+              </div>
+            
+            </div>
+          </div>
+
+    </div>
+
+   </div>
+
+</div>

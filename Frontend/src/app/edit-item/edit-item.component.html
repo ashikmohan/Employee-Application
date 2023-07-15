@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <form [formGroup]="notesForm" (ngSubmit)="onSubmit()">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Name</label>
+    <input type="title" class="form-control" id="exampleFormControlInput1" formControlName="Name">
+  </div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Designation</label>
+    <input type="title" class="form-control" id="exampleFormControlInput1" formControlName="Designation" >
+  </div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Location</label>
+    <input type="title" class="form-control" id="exampleFormControlInput1" formControlName="Location">
+  </div>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Salary</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" formControlName="Salary">
+  </div>
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form>
+</div>
+  
