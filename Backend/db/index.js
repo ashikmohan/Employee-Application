@@ -1,9 +1,13 @@
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
+require('dotenv').config(); // Make sure to require dotenv and load .env before using process.env
 
-mongoose.connect('mongodb+srv://AshikMohan:Ashik12345@cluster0.ngaoxfw.mongodb.net/Employee')
-.then(()=>{
-    console.log('Mongo DB is connected')
+mongoose.connect(process.env.connection_url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 })
-.catch(()=>{
-    console.log('Error in connecting MongoDB'+ err)
-})
+  .then(() => {
+    console.log('Mongo DB is connected');
+  })
+  .catch((err) => {
+    console.log('Error in connecting MongoDB: ' + err);
+  });

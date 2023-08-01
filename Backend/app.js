@@ -7,6 +7,8 @@ const jwt=require('jsonwebtoken');
 require('./db/index')
 const api=require('./router/employees')
 
+require('dotenv').config();
+
 app.use(morgan('dev'));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
